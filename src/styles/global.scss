@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import './variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: $text-color;
+    font-size: $font-size;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: $text-color;
+    background: $color-primary;
+}
+  
+::selection {
+    color: $text-color;
+    background: $color-primary;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    background-color: $color-primary;
+    object-fit: cover;
+}
+
+body {
+    background-color: $color-background;
+}

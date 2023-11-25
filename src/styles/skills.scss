@@ -1,0 +1,80 @@
+@import './variables.scss';
+
+
+section.skills {
+    position: relative;
+    display: block;
+    padding: 0px $mobile-center-padding;
+    width: 100%;
+    transition-duration: 0.3s;
+
+    fieldset {
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: stretch;
+        gap: calc(5vh + 20px) 10%;
+        width: 100%;
+        height: auto;
+        border: none;
+        border-top: 1px solid $primary-alpha;
+        transition-duration: 0.3s;
+
+        legend {
+            position: relative;
+            text-align: center;
+            font-size: calc($font-size + 5vw);
+            font-weight: bold;
+            color: $primary-alpha;
+            margin-bottom: 50px;
+            padding: 0px calc(2.5vw + 10px);
+        }
+
+        div {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 30%;
+            padding: 1em 3em 3em;
+            gap: 2em;
+            background-color: $primary-beta;
+            min-width: 250px;
+            border-radius: 10px;
+    
+            h1 {
+                font-size: $font-size * 1.5;
+                font-weight: bold;
+                text-align: center;
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    section.skills {
+        margin-top: 50px;
+
+        fieldset {
+            gap: calc(5vh + 20px) 5%;
+
+            legend {
+                font-size: $font-size * 3;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    section.skills {
+        fieldset {
+            div {
+                width: 80%;
+            }
+        }
+    }    
+}
