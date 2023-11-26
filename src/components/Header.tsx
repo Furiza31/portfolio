@@ -4,7 +4,7 @@ import { Fade } from 'react-awesome-reveal';
 
 export const Header = () => {
 
-    const [isScrolled, setIsScrolled] = useState<boolean>(false);
+    const [isScrolled, setIsScrolled] = useState<boolean>(window.scrollY > 30);
     const [isToggled, setIsToggled] = useState<boolean>(false);
     
     const handleToggle = () => {
