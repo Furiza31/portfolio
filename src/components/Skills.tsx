@@ -6,7 +6,6 @@ export const Skills = () => {
         <section className="skills">
             <fieldset>
                 <legend>Skills</legend>
-                <Fade direction='up' duration={150}>
                     <div className='skill'>
                         <h1>Programming</h1>
                         <Fade cascade direction='up' duration={75}>
@@ -52,8 +51,6 @@ export const Skills = () => {
                             </div>
                         </Fade>
                     </div>
-                </Fade>
-                <Fade direction='up' duration={150}>
                     <div className='skill'>
                         <h1>Databases</h1>
                         <Fade cascade direction='up' duration={150}>
@@ -79,8 +76,6 @@ export const Skills = () => {
                             </div>
                         </Fade>
                     </div>
-                </Fade>
-                <Fade direction='up' duration={150}>
                     <div className='skill'>  
                         <h1>System and network</h1>
                         <Fade cascade direction='up' duration={150}>
@@ -106,8 +101,6 @@ export const Skills = () => {
                             </div>
                         </Fade>
                     </div>
-                </Fade>
-                <Fade direction='up' duration={150}>
                     <div className='skill'>
                         <h1>Project management</h1>
                         <Fade cascade direction='up' duration={150}>
@@ -137,7 +130,6 @@ export const Skills = () => {
                             </div>
                         </Fade>
                     </div>
-                </Fade>
             </fieldset>
         </section>
     )
