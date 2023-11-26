@@ -1,11 +1,13 @@
 import '../styles/header.scss';
 import { useEffect, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
+import { debounce } from '../utils/debouce';
 
 export const Header = () => {
 
     const [isScrolled, setIsScrolled] = useState<boolean>(window.scrollY > 30);
     const [isToggled, setIsToggled] = useState<boolean>(false);
+    const mobileBreakpoint = 1300;
     
     const handleToggle = () => {
         setIsToggled(!isToggled);
@@ -16,10 +18,16 @@ export const Header = () => {
         else setIsScrolled(false);
     }
 
+    const handleResize = debounce(() => {
+            if (window.innerWidth > mobileBreakpoint) setIsToggled(false);
+        }, 300);
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
+        window.addEventListener('resize', handleResize as EventListener)
         return () => {
             window.removeEventListener('scroll', handleScroll)
+            window.removeEventListener('resize', handleResize as EventListener)
         }
     })
 
