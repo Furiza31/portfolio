@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-top: 50px;
+
+    p {
+        span.me {
+            text-decoration: underline;
+            font-family: 'Rock Salt', cursive;
+            transition-duration: 0.3s;
+        }
+    }
+}

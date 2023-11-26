@@ -3,7 +3,7 @@ import { Fade } from 'react-awesome-reveal';
 
 export const Hero = () => {
     return (
-        <section className="hero">
+        <section className="hero" id='home'>
             <div className='hero-text'>
                 <Fade cascade direction='up' duration={200} className='fade'>
                     <h1>

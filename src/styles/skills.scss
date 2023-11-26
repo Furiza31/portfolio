@@ -6,6 +6,8 @@ section.skills {
     display: block;
     padding: 0px $mobile-center-padding;
     width: 100%;
+    margin-top: 50px;
+    padding-top: $header-height;
     transition-duration: 0.3s;
 
     fieldset {
@@ -46,6 +48,7 @@ section.skills {
             min-width: 250px;
             max-width: 50%;
             border-radius: 10px;
+                        border: 1px solid $color-primary;
     
             h1 {
                 font-size: $font-size * 1.5;
@@ -82,8 +85,6 @@ section.skills {
 
 @media screen and (max-width: 1300px) {
     section.skills {
-        margin-top: 50px;
-
         fieldset {
             gap: calc(5vh + 20px) 5%;
 
@@ -97,8 +98,8 @@ section.skills {
 @media screen and (max-width: 650px) {
     section.skills {
         fieldset {
-            div {
-                width: 80%;
+            div.skill {
+                min-width: 80%;
             }
         }
     }    

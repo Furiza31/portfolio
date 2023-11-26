@@ -3,7 +3,7 @@ import { Fade } from 'react-awesome-reveal';
 
 export const Skills = () => {
     return (
-        <section className="skills">
+        <section className="skills" id='skills'>
             <fieldset>
                 <legend>Skills</legend>
                     <div className='skill'>

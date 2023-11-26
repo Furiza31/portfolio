@@ -42,15 +42,15 @@ export const Header = () => {
             <nav>
                 <Fade cascade direction='up' duration={150}>
                     <h1 className='menu-title'>Menu</h1>
-                    <a href="">
+                    <a href="#home">
                         <img src="/images/icons/home.svg" alt="Home" />
                         Home
                     </a>
-                    <a href="">
+                    <a href="#skills">
                         <img src="/images/icons/skills.svg" alt="Skills" />
                         Skills
                     </a>
-                    <a href="">
+                    <a href="#projects">
                         <img src="/images/icons/projects.svg" alt="Projects" />
                         Projects
                     </a>
