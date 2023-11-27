@@ -9,7 +9,7 @@ header {
     top: 0px;
     left: 0px;
     z-index: 100;
-    padding: 0px $center-padding;
+    padding: 0px $mobile-center-padding;
     height: $header-height;
     width: 100%;
     transition-duration: 0.3s;
@@ -63,10 +63,15 @@ header {
             border-radius: 5px;
             transition-duration: 0.3s;
             border: 1px solid $color-background;
+            cursor: pointer;
 
             &:hover {
                 background-color: $color-secondary;
                 border: 1px solid $color-primary;
+
+                div.submenu {
+                    display: flex;
+                }
             }
 
             img {
@@ -76,6 +81,53 @@ header {
                 height: 20px;
                 background-color: transparent;
                 fill: $text-color;
+            }
+
+            div.submenu {
+                position: absolute;
+                display: none;
+                flex-flow: column nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+                background-color: $color-background;
+                border-radius: 5px;
+                padding: 10px;
+                margin-top: 10%;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                box-shadow: 0px 0px 10px 0px $primary-alpha;
+                z-index: 103;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    height: 10%;
+                    width: 100%;
+                    top: -10%;
+                }
+
+                div {
+                    position: relative;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                    transition-duration: 0.3s;
+                    width: 100%;
+                    border: 1px solid $color-background;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $color-secondary;
+                        border: 1px solid $color-primary;
+                    }
+                }
             }
         }
 
@@ -130,11 +182,9 @@ header.scrolled {
     box-shadow: 0px 0px 10px 0px $primary-alpha;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1350px) {
 
     header {
-        padding: 0px $mobile-center-padding;
-
         nav {
             position: absolute;
             display: none;

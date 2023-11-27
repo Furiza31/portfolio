@@ -1,20 +1,23 @@
 import '../styles/hero.scss'
 import { Fade } from 'react-awesome-reveal';
 import { ContactLinks } from './contacts/ContactLinks';
+import { translator } from '../services/translator';
 
 export const Hero = () => {
+    const t = translator.getInstance();
+
     return (
         <section className="hero" id='home'>
             <div className='hero-text'>
                 <Fade cascade direction='up' duration={200} className='fade'>
                     <h1>
-                        Hugo Wendjaneh
+                        {t.getTranslation('me')}
                     </h1>
                     <h2>
-                        Full Stack Developer
+                        {t.getTranslation('hero_title')}
                     </h2>
                     <p>
-                        Curious, motivated, and detail-oriented individual eager to acquire new knowledge. Constantly evolving, in symbiosis with new technologies.
+                        {t.getTranslation('hero_text')}
                     </p>
                 </Fade>
                     <div className='hero-contact'>

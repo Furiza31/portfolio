@@ -1,11 +1,14 @@
+import { translator } from '../../services/translator';
 import '../../styles/contact/contact.scss';
 import { ContactLinks } from './ContactLinks';
 
 export const Contacts = () => {
+    const t = translator.getInstance();
+
     return (
         <section className="contacts" id='contacts'>
             <fieldset>
-                <legend>Contact</legend>
+                <legend>{t.getTranslation('header_contacts')}</legend>
                 <ContactLinks />
             </fieldset>
         </section>

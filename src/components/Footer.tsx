@@ -1,13 +1,16 @@
+import { translator } from '../services/translator'
 import '../styles/footer.scss'
 
 export const Footer = () => {
+    const t = translator.getInstance();
+
     return (
         <footer>
             <p>
-                Created and Designed with  <span>❤️</span>
+                {t.getTranslation('footer_text')} <span>{t.getTranslation('footer_heart')}</span>
             </p>
             <p>
-                © Copyright 2023 <span className='dash'>-</span><br /> <span className='me'> Hugo Wendjaneh </span>
+                {t.getTranslation('footer_copyrigth')} <span className='dash'>{t.getTranslation('footer_dash')}</span><br /> <span className='me'> {t.getTranslation('me')} </span>
             </p>
         </footer>
     )

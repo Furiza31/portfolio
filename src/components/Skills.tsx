@@ -1,132 +1,135 @@
+import { translator } from '../services/translator';
 import '../styles/skills.scss'
 import { Fade } from 'react-awesome-reveal';
 
 export const Skills = () => {
+    const t = translator.getInstance();
+
     return (
         <section className="skills" id='skills'>
             <fieldset>
-                <legend>Skills</legend>
+                <legend>{t.getTranslation('header_skills')}</legend>
                     <div className='skill'>
-                        <h1>Programming</h1>
+                        <h1>{t.getTranslation('skills_programming')}</h1>
                         <Fade cascade direction='up' duration={75}>
                             <div>
                                 <img src='/images/icons/skills/programming/vuejs.svg' alt='VueJS' />
-                                <p>VueJS</p>
+                                <p>{t.getTranslation('skills_programming_vuejs')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/programming/angular.svg' alt='Angular' />
-                                <p>Angular</p>
+                                <p>{t.getTranslation('skills_programming_angular')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/programming/react.svg' alt='React' />
-                                <p>React</p>
+                                <p>{t.getTranslation('skills_programming_react')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/programming/svelte.svg' alt='Svelte' />
-                                <p>Svelte</p>
+                                <p>{t.getTranslation('skills_programming_svelte')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/programming/symfony.svg' alt='Symfony' />
-                                <p>PHP / Symfony</p>
+                                <p>{t.getTranslation('skills_programming_phpSymfony')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/programming/java.svg' alt='Java' />
-                                <p>Java</p>
+                                <p>{t.getTranslation('skills_programming_java')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/programming/python.svg' alt='Python' />
-                                <p>Python</p>
+                                <p>{t.getTranslation('skills_programming_python')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/programming/nodejs.svg' alt='NodeJS' />
-                                <p>NodeJS</p>
+                                <p>{t.getTranslation('skills_programming_nodejs')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/programming/bash.svg' alt='Bash' />
-                                <p>Bash</p>
+                                <p>{t.getTranslation('skills_programming_bash')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/programming/git.svg' alt='Git' />
-                                <p>Git</p>
+                                <p>{t.getTranslation('skills_programming_git')}</p>
                             </div>
                         </Fade>
                     </div>
                     <div className='skill'>
-                        <h1>Databases</h1>
+                        <h1>{t.getTranslation('skills_databases')}</h1>
                         <Fade cascade direction='up' duration={150}>
                             <div>
                                 <img src='/images/icons/skills/databases/mysql.svg' alt='Mysql' />
-                                <p>MySQL</p>
+                                <p>{t.getTranslation('skills_databases_mysql')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/databases/postgresql.svg' alt='PostgreSQL' />
-                                <p>PostgreSQL</p>
+                                <p>{t.getTranslation('skills_databases_postgresql')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/databases/oracle.svg' alt='Oracle' />
-                                <p>Oracle</p>
+                                <p>{t.getTranslation('skills_databases_oracle')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/databases/prisma.svg' alt='Prisma' />
-                                <p>Prisma</p>
+                                <p>{t.getTranslation('skills_databases_prisma')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/databases/amazonaws.svg' alt='Amazon AWS' />
-                                <p>Amazon S3</p>
+                                <p>{t.getTranslation('skills_databases_amazons3')}</p>
                             </div>
                         </Fade>
                     </div>
                     <div className='skill'>  
-                        <h1>System and network</h1>
+                        <h1>{t.getTranslation('skills_systemAndNetwork')}</h1>
                         <Fade cascade direction='up' duration={150}>
                             <div>
                                 <img src='/images/icons/skills/systemAndNetwork/unix.svg' alt='Unix' />
-                                <p>Unix</p>
+                                <p>{t.getTranslation('skills_systemAndNetwork_unix')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/systemAndNetwork/docker.svg' alt='Docker' />
-                                <p>Docker</p>
+                                <p>{t.getTranslation('skills_systemAndNetwork_docker')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/systemAndNetwork/webserver.svg' alt='Web server' />
-                                <p>Web server</p>
+                                <p>{t.getTranslation('skills_systemAndNetwork_webServer')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/systemAndNetwork/sshserver.svg' alt='SSH server' />
-                                <p>SSH server</p>
+                                <p>{t.getTranslation('skills_systemAndNetwork_sshServer')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/systemAndNetwork/api.svg' alt='API' />
-                                <p>API</p>
+                                <p>{t.getTranslation('skills_systemAndNetwork_api')}</p>
                             </div>
                         </Fade>
                     </div>
                     <div className='skill'>
-                        <h1>Project management</h1>
+                        <h1>{t.getTranslation('skills_projectManagement')}</h1>
                         <Fade cascade direction='up' duration={150}>
                             <div>
                                 <img src='/images/icons/skills/projectManagement/figma.svg' alt='Figma' />
-                                <p>Figma</p>
+                                <p>{t.getTranslation('skills_projectManagement_figma')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/projectManagement/github.svg' alt='Github' />
-                                <p>Github</p>
+                                <p>{t.getTranslation('skills_projectManagement_github')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/projectManagement/ganttproject.svg' alt='Gantt Project' />
-                                <p>Gantt Project</p>
+                                <p>{t.getTranslation('skills_projectManagement_ganttProject')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/projectManagement/googlesuite.svg' alt='Google suite' />
-                                <p>Google suite</p>
+                                <p>{t.getTranslation('skills_projectManagement_googleSuite')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/projectManagement/asciidoc.svg' alt='Asciidoc' />
-                                <p>Asciidoc</p>
+                                <p>{t.getTranslation('skills_projectManagement_asciidoc')}</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/projectManagement/clickup.svg' alt='ClickUp' />
-                                <p>ClickUp</p>
+                                <p>{t.getTranslation('skills_projectManagement_clickup')}</p>
                             </div>
                         </Fade>
                     </div>
