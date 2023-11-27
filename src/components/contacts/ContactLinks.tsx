@@ -16,6 +16,10 @@ export const ContactLinks = () => {
                 <img src="/images/icons/email.svg" alt="Mail" />
                 hugo.wendjaneh@gmail.com
             </a>
+            <a href="/documents/CV.pdf" className='contact_link' target='_blank'>
+                <img src="/images/icons/cv.svg" alt="CV" />
+                Curriculum vitae
+            </a>
         </Fade>
     )
 }
