@@ -38,16 +38,16 @@ export const Skills = () => {
                                 <p>Python</p>
                             </div>
                             <div>
+                                <img src='/images/icons/skills/programming/nodejs.svg' alt='NodeJS' />
+                                <p>NodeJS</p>
+                            </div>
+                            <div>
                                 <img src='/images/icons/skills/programming/bash.svg' alt='Bash' />
                                 <p>Bash</p>
                             </div>
                             <div>
                                 <img src='/images/icons/skills/programming/git.svg' alt='Git' />
                                 <p>Git</p>
-                            </div>
-                            <div>
-                                <img src='/images/icons/skills/programming/nodejs.svg' alt='NodeJS' />
-                                <p>NodeJS</p>
                             </div>
                         </Fade>
                     </div>

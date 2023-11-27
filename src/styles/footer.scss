@@ -12,10 +12,29 @@ footer {
     margin-top: 50px;
 
     p {
+        text-align: center;
         span.me {
             text-decoration: underline;
             font-family: 'Rock Salt', cursive;
             transition-duration: 0.3s;
+        }
+
+        br {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    footer {
+        p {
+            br {
+                display: block;
+            }
+
+            span.dash {
+                display: none;
+            }
         }
     }
 }

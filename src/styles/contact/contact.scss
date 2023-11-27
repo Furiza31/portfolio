@@ -1,0 +1,46 @@
+@import '../variables.scss';
+
+
+section.contacts {
+    position: relative;
+    display: block;
+    padding: 0px $mobile-center-padding;
+    width: 100%;
+    margin-top: 50px;
+    padding-top: $header-height;
+    transition-duration: 0.3s;
+
+    fieldset {
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+        height: auto;
+        border: none;
+        border-top: 1px solid $primary-alpha;
+        transition-duration: 0.3s;
+
+        legend {
+            position: relative;
+            text-align: center;
+            font-size: calc($font-size + 5vw);
+            font-weight: bold;
+            color: $primary-alpha;
+            margin-bottom: 50px;
+            padding: 0px calc(2.5vw + 10px);
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    section.contacts {
+        fieldset {
+            legend {
+                font-size: $font-size * 3;
+            }
+        }
+    }
+}

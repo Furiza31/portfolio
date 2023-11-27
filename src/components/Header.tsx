@@ -54,7 +54,7 @@ export const Header = () => {
                         <img src="/images/icons/projects.svg" alt="Projects" />
                         Projects
                     </a>
-                    <a href="">
+                    <a href="#contacts">
                         <img src="/images/icons/contact.svg" alt="Contact" />
                         Contact
                     </a>

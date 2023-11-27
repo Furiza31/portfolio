@@ -5,6 +5,7 @@ import { Hero } from './components/Hero'
 import { Skills } from './components/Skills'
 import { Projects } from './components/Projects'
 import { Footer } from './components/Footer'
+import { Contacts } from './components/contacts/Contacts'
 import './styles/global.scss'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Hero />
     <Skills />
     <Projects />
+    <Contacts />
     <Footer />
   </React.StrictMode>,
 )
