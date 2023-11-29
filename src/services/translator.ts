@@ -1,26 +1,18 @@
 import { useTranslation } from "react-i18next"
-
-export enum languages {
-    EN = "en",
-    FR = "fr"
-}
+import { languages } from "../types/languages";
 
 export class translator {
     private static instance: translator;
     private languages = languages;
-    private t: (arg0: string) => string;
-    private i18n: { language: string; changeLanguage: (arg0: string) => void; };
+    private t: (arg0: string) => string | undefined = () => undefined;
+    private i18n: { language: string; changeLanguage: (arg0: string) => void; } = { language: "", changeLanguage: () => {} };
 
     /**
      * Private constructor
      * @constructor
      * @private
      */
-    private constructor() {
-        const { t, i18n } = useTranslation();        
-        this.t = t;
-        this.i18n = i18n;
-    }
+    private constructor() {}
 
     /**
      * Get the instance of the translator
@@ -30,6 +22,9 @@ export class translator {
         if (!this.instance) {
             this.instance = new translator();
         }
+        const { t, i18n } = useTranslation();        
+        this.instance.t = t;
+        this.instance.i18n = i18n;
         return this.instance;
     }
 

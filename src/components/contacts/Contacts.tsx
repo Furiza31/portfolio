@@ -8,7 +8,7 @@ export const Contacts = () => {
     return (
         <section className="contacts" id='contacts'>
             <fieldset>
-                <legend>{t.getTranslation('header_contacts')}</legend>
+                <legend>{t.getTranslation('header_contact')}</legend>
                 <ContactLinks />
             </fieldset>
         </section>

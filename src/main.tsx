@@ -1,22 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './i18n'
-
-import { Header } from './components/Header'
-import { Hero } from './components/Hero'
-import { Skills } from './components/Skills'
-import { Projects } from './components/Projects'
-import { Footer } from './components/Footer'
-import { Contacts } from './components/contacts/Contacts'
 import './styles/global.scss'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import routes from './config/routes'
+
+const router = createBrowserRouter(routes);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Header />
-    <Hero />
-    <Skills />
-    <Projects />
-    <Contacts />
-    <Footer />
-  </React.StrictMode>,
+    <RouterProvider router={router} />
+  </React.StrictMode>
 )

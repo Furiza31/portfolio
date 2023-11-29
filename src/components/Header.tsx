@@ -2,7 +2,9 @@ import '../styles/header.scss';
 import { useEffect, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { debounce } from '../utils/debouce';
-import { translator, languages } from '../services/translator';
+import { translator } from '../services/translator';
+import { languages } from '../types/languages';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
     const t = translator.getInstance();
@@ -44,36 +46,36 @@ export const Header = () => {
             <nav>
                 <Fade cascade direction='up' duration={150}>
                     <h1 className='menu-title'>{t.getTranslation('header_menu')}</h1>
-                    <a href="#home">
+                    <a href="#home" onClick={() => setIsToggled(false)}>
                         <img src="/images/icons/home.svg" alt="Home" />
                         {t.getTranslation('header_home')}
                     </a>
-                    <a href="#skills">
+                    <a href="#skills" onClick={() => setIsToggled(false)}>
                         <img src="/images/icons/skills.svg" alt="Skills" />
                         {t.getTranslation('header_skills')}
                     </a>
-                    <a href="#projects">
+                    <a href="#projects" onClick={() => setIsToggled(false)}>
                         <img src="/images/icons/projects.svg" alt="Projects" />
                         {t.getTranslation('header_projects')}
                     </a>
-                    <a href="#contacts">
+                    <a href="#contacts" onClick={() => setIsToggled(false)}>
                         <img src="/images/icons/contact.svg" alt="Contact" />
-                        {t.getTranslation('header_contacts')}
+                        {t.getTranslation('header_contact')}
                     </a>
-                    <a>
+                    <div className='menu'>
                         <img src="/images/icons/languages.svg" alt="Languages" />
                         {t.getTranslation('header_languages')}
                         <div className='submenu'>
-                            <div onClick={() => t.changeLanguage(languages.EN)}>
+                            <Link to={`/en`} className='language' onClick={() => {t.changeLanguage(languages.EN); setIsToggled(false)}}>
                                 <img src="/images/icons/flag/uk.svg" alt="English" />
                                 {t.getTranslation('header_languages_english')}
-                            </div>
-                            <div onClick={() => t.changeLanguage(languages.FR)}>
+                            </Link>
+                            <Link to={`/fr`} className='language' onClick={() => {t.changeLanguage(languages.FR); setIsToggled(false)}}>
                                 <img src="/images/icons/flag/fr.svg" alt="French" />
                                 {t.getTranslation('header_languages_french')}
-                            </div>
+                            </Link>
                         </div>
-                    </a>
+                    </div>
                 </Fade>
             </nav>
             <div className='toggle' onClick={handleToggle}>

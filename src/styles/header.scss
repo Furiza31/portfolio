@@ -52,7 +52,7 @@ header {
         align-items: center;
         gap: 1vw;
 
-        a {
+        a, div.menu {
             position: relative;
             display: flex;
             flex-flow: row nowrap;
@@ -104,12 +104,12 @@ header {
                     content: '';
                     position: absolute;
                     display: block;
-                    height: 10%;
+                    height: 20%;
                     width: 100%;
-                    top: -10%;
+                    top: -15%;
                 }
 
-                div {
+                .language {
                     position: relative;
                     display: flex;
                     flex-flow: row nowrap;
