@@ -27,6 +27,10 @@ const routes = [
         path: '/:currentLanguage',
         element: page
     },
+    {
+        path: '*',
+        element: <Navigate to="/en" />
+    }
 ] as RouteObject[];
 
 export default routes;

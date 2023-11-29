@@ -44,7 +44,7 @@ export const Header = () => {
             </Fade>
             </a>
             <nav>
-                <Fade cascade direction='up' duration={150}>
+                <Fade cascade direction='up' duration={100}>
                     <h1 className='menu-title'>{t.getTranslation('header_menu')}</h1>
                     <a href="#home" onClick={() => setIsToggled(false)}>
                         <img src="/images/icons/home.svg" alt="Home" />
@@ -63,17 +63,25 @@ export const Header = () => {
                         {t.getTranslation('header_contact')}
                     </a>
                     <div className='menu'>
-                        <img src="/images/icons/languages.svg" alt="Languages" />
-                        {t.getTranslation('header_languages')}
+                        <span>
+                            <img src="/images/icons/languages.svg" alt="Languages" />
+                        </span>
+                        <span>
+                            {t.getTranslation('header_languages')}
+                        </span>
                         <div className='submenu'>
-                            <Link to={`/en`} className='language' onClick={() => {t.changeLanguage(languages.EN); setIsToggled(false)}}>
-                                <img src="/images/icons/flag/uk.svg" alt="English" />
-                                {t.getTranslation('header_languages_english')}
-                            </Link>
-                            <Link to={`/fr`} className='language' onClick={() => {t.changeLanguage(languages.FR); setIsToggled(false)}}>
-                                <img src="/images/icons/flag/fr.svg" alt="French" />
-                                {t.getTranslation('header_languages_french')}
-                            </Link>
+                            <Fade cascade direction='up' duration={100}>
+                                <Link to={`/en`} className={`language ${t.getLanguage() === languages.EN ? 'active' : ''}`}
+                                    onClick={() => {t.changeLanguage(languages.EN); setIsToggled(false)}}>
+                                    <img src="/images/icons/flag/uk.svg" alt="English" />
+                                    {t.getTranslation('header_languages_english')}
+                                </Link>
+                                <Link to={`/fr`} className={`language ${t.getLanguage() === languages.FR ? 'active' : ''}`}
+                                    onClick={() => {t.changeLanguage(languages.FR); setIsToggled(false)}}>
+                                    <img src="/images/icons/flag/fr.svg" alt="French" />
+                                    {t.getTranslation('header_languages_french')}
+                                </Link>
+                            </Fade>
                         </div>
                     </div>
                 </Fade>

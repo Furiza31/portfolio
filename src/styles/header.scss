@@ -99,6 +99,7 @@ header {
                 transform: translateX(-50%);
                 box-shadow: 0px 0px 10px 0px $primary-alpha;
                 z-index: 103;
+                cursor: default;
 
                 &::before {
                     content: '';
@@ -131,7 +132,19 @@ header {
             }
         }
 
-        a.toggled {
+        div.menu {
+            min-width: 150px;
+
+            div.submenu {
+                min-width: 150px;
+
+                .language {
+                    min-width: 130px;
+                }
+            }
+        }
+
+        a.toggled, div.menu div.submenu .language.active {
             background-color: $color-secondary;
         }
 
@@ -196,17 +209,42 @@ header.scrolled {
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
-            gap: 5vh;
+            gap: 4vh;
             z-index: 101;
             animation-name: slideIn;
             animation-duration: 0.3s;
 
-            a {
+            a, div.menu {
                 font-size: $font-size * 1.5;
 
                 img {
                     width: 30px;
                     height: 30px;
+                }
+
+                span {
+                    display: none;
+                }
+
+                div.submenu {
+                    position: relative;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: $font-size * 1.5;
+                    margin: initial;
+                    padding: 0px;
+                    gap: 5px;
+                    box-shadow: none;
+
+                    &::before {
+                        display: none;
+                    }
+
+                    .language {
+                        padding: 7px;
+                    }
                 }
             }
 
