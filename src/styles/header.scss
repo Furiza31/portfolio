@@ -248,6 +248,13 @@ header.scrolled {
                 }
             }
 
+            div.menu {
+                &:hover {
+                    background-color: transparent;
+                    border: 1px solid $color-background;
+                }
+            }
+
             h1.menu-title {
                 display: block;
             }
