@@ -5,6 +5,14 @@ import { debounce } from '../utils/debouce';
 import { translator } from '../services/translator';
 import { languages } from '../types/languages';
 import { Link } from 'react-router-dom';
+import me from '../assets/images/me/me.png';
+import home from '../assets/images/icons/home.svg';
+import skills from '../assets/images/icons/skills.svg';
+import projects from '../assets/images/icons/projects.svg';
+import contact from '../assets/images/icons/contact.svg';
+import languagesIcon from '../assets/images/icons/languages.svg';
+import uk from '../assets/images/icons/flag/uk.svg';
+import fr from '../assets/images/icons/flag/fr.svg';
 
 export const Header = () => {
     const t = translator.getInstance();
@@ -39,7 +47,7 @@ export const Header = () => {
         <header className={`${isScrolled ? 'scrolled' : ''} ${isToggled ? 'toggled' : ''}`}>
             <a href="" className='title'>
             <Fade cascade direction='up' duration={200}>
-                <img src="/images/me/me.png" alt="Me" />
+                <img src={me} alt="Me" />
                 <h1>{t.getTranslation('me')}</h1>
             </Fade>
             </a>
@@ -47,24 +55,24 @@ export const Header = () => {
                 <Fade cascade direction='up' duration={100}>
                     <h1 className='menu-title'>{t.getTranslation('header_menu')}</h1>
                     <a href="#home" onClick={() => setIsToggled(false)}>
-                        <img src="/images/icons/home.svg" alt="Home" />
+                        <img src={home} alt="Home" />
                         {t.getTranslation('header_home')}
                     </a>
                     <a href="#skills" onClick={() => setIsToggled(false)}>
-                        <img src="/images/icons/skills.svg" alt="Skills" />
+                        <img src={skills} alt="Skills" />
                         {t.getTranslation('header_skills')}
                     </a>
                     <a href="#projects" onClick={() => setIsToggled(false)}>
-                        <img src="/images/icons/projects.svg" alt="Projects" />
+                        <img src={projects} alt="Projects" />
                         {t.getTranslation('header_projects')}
                     </a>
                     <a href="#contacts" onClick={() => setIsToggled(false)}>
-                        <img src="/images/icons/contact.svg" alt="Contact" />
+                        <img src={contact} alt="Contact" />
                         {t.getTranslation('header_contact')}
                     </a>
                     <div className='menu'>
                         <span>
-                            <img src="/images/icons/languages.svg" alt="Languages" />
+                            <img src={languagesIcon} alt="Languages" />
                         </span>
                         <span>
                             {t.getTranslation('header_languages')}
@@ -73,12 +81,12 @@ export const Header = () => {
                             <Fade cascade direction='up' duration={100}>
                                 <Link to={`/en`} className={`language ${t.getLanguage() === languages.EN ? 'active' : ''}`}
                                     onClick={() => {t.changeLanguage(languages.EN); setIsToggled(false)}}>
-                                    <img src="/images/icons/flag/uk.svg" alt="English" />
+                                    <img src={uk} alt="English" />
                                     {t.getTranslation('header_languages_english')}
                                 </Link>
                                 <Link to={`/fr`} className={`language ${t.getLanguage() === languages.FR ? 'active' : ''}`}
                                     onClick={() => {t.changeLanguage(languages.FR); setIsToggled(false)}}>
-                                    <img src="/images/icons/flag/fr.svg" alt="French" />
+                                    <img src={fr} alt="French" />
                                     {t.getTranslation('header_languages_french')}
                                 </Link>
                             </Fade>

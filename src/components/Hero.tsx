@@ -2,6 +2,7 @@ import '../styles/hero.scss'
 import { Fade } from 'react-awesome-reveal';
 import { ContactLinks } from './contacts/ContactLinks';
 import { translator } from '../services/translator';
+import me from '../assets/images/me/me.png';
 
 export const Hero = () => {
     const t = translator.getInstance();
@@ -25,7 +26,7 @@ export const Hero = () => {
                     </div>
             </div>
             <Fade cascade direction='up' duration={200} className='fade'>
-                <img src="/images/me/me.png" alt="Me" className='me' />
+                <img src={me} alt="Me" className='me' />
             </Fade>
         </section>
     );
