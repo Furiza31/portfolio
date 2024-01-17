@@ -123,6 +123,7 @@ header {
                     width: 100%;
                     border: 1px solid $color-background;
                     cursor: pointer;
+                    background-color: transparent;
 
                     &:hover {
                         background-color: $color-secondary;

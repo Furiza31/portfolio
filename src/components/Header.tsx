@@ -4,7 +4,6 @@ import { Fade } from 'react-awesome-reveal';
 import { debounce } from '../utils/debouce';
 import { translator } from '../services/translator';
 import { languages } from '../types/languages';
-import { Link } from 'react-router-dom';
 import me from '../assets/images/me/me.png';
 import home from '../assets/images/icons/home.svg';
 import skills from '../assets/images/icons/skills.svg';
@@ -79,16 +78,16 @@ export const Header = () => {
                         </span>
                         <div className='submenu'>
                             <Fade cascade direction='up' duration={100}>
-                                <Link to={`/portfolio/en`} className={`language ${t.getLanguage() === languages.EN ? 'active' : ''}`}
+                                <button className={`language ${t.getLanguage() === languages.EN ? 'active' : ''}`}
                                     onClick={() => {t.changeLanguage(languages.EN); setIsToggled(false)}}>
                                     <img src={uk} alt="English" />
                                     {t.getTranslation('header_languages_english')}
-                                </Link>
-                                <Link to={`/portfolio/fr`} className={`language ${t.getLanguage() === languages.FR ? 'active' : ''}`}
+                                </button>
+                                <button className={`language ${t.getLanguage() === languages.FR ? 'active' : ''}`}
                                     onClick={() => {t.changeLanguage(languages.FR); setIsToggled(false)}}>
                                     <img src={fr} alt="French" />
                                     {t.getTranslation('header_languages_french')}
-                                </Link>
+                                </button>
                             </Fade>
                         </div>
                     </div>

@@ -19,16 +19,12 @@ const page =
 
 const routes = [
     {
-        path: '/',
-        element: <Navigate to="/portfolio/en" />
-    },
-    {
-        path: '/portfolio/:currentLanguage',
+        path: '/portfolio/',
         element: page
     },
     {
         path: '*',
-        element: <Navigate to="/portfolio/en" />
+        element: <Navigate to="/portfolio/" />
     }
 ] as RouteObject[];
 
