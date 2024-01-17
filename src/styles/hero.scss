@@ -97,8 +97,6 @@ section.hero {
         display: block;
         width: calc(55vw - #{$center-padding} * 2);
         aspect-ratio: 1/1;
-        -webkit-mask-image: url('/images/me/splash.png');
-        mask-image: url('/images/me/splash.png');
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         -webkit-mask-position: center;

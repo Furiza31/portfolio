@@ -3,6 +3,7 @@ import { Fade } from 'react-awesome-reveal';
 import { ContactLinks } from './contacts/ContactLinks';
 import { translator } from '../services/translator';
 import me from '../assets/images/me/me.png';
+import splash from '../assets/images/me/splash.png';
 
 export const Hero = () => {
     const t = translator.getInstance();
@@ -26,7 +27,10 @@ export const Hero = () => {
                     </div>
             </div>
             <Fade cascade direction='up' duration={200} className='fade'>
-                <img src={me} alt="Me" className='me' />
+                <img src={me} alt="Me" className='me' style={{
+                    maskImage: 'url(' + splash + ')',
+                    WebkitMaskImage: 'url(' + splash + ')'
+                }} />
             </Fade>
         </section>
     );
