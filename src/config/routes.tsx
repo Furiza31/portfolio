@@ -20,15 +20,15 @@ const page =
 const routes = [
     {
         path: '/',
-        element: <Navigate to="/en" />
+        element: <Navigate to="/portfolio/en" />
     },
     {
-        path: '/:currentLanguage',
+        path: '/portfolio/:currentLanguage',
         element: page
     },
     {
         path: '*',
-        element: <Navigate to="/en" />
+        element: <Navigate to="/portfolio/en" />
     }
 ] as RouteObject[];
 

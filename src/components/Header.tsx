@@ -79,12 +79,12 @@ export const Header = () => {
                         </span>
                         <div className='submenu'>
                             <Fade cascade direction='up' duration={100}>
-                                <Link to={`/en`} className={`language ${t.getLanguage() === languages.EN ? 'active' : ''}`}
+                                <Link to={`/portfolio/en`} className={`language ${t.getLanguage() === languages.EN ? 'active' : ''}`}
                                     onClick={() => {t.changeLanguage(languages.EN); setIsToggled(false)}}>
                                     <img src={uk} alt="English" />
                                     {t.getTranslation('header_languages_english')}
                                 </Link>
-                                <Link to={`/fr`} className={`language ${t.getLanguage() === languages.FR ? 'active' : ''}`}
+                                <Link to={`/portfolio/fr`} className={`language ${t.getLanguage() === languages.FR ? 'active' : ''}`}
                                     onClick={() => {t.changeLanguage(languages.FR); setIsToggled(false)}}>
                                     <img src={fr} alt="French" />
                                     {t.getTranslation('header_languages_french')}

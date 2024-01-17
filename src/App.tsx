@@ -8,7 +8,7 @@ import { Navigate } from "react-router-dom";
 export const App = ({ children }: { children: React.ReactNode }) => {
     const { currentLanguage } = useParams();
     if ((Object.values(languages) as string[]).includes(currentLanguage ?? '') === false) {
-        return <Navigate to={`/${languages.EN}`} />;
+        return <Navigate to={`/portfolio/${languages.EN}`} />;
     }
     i18nUse.init({
         // Set the resources object for the languages
