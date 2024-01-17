@@ -107,7 +107,7 @@ export const Projects = () => {
                         </Fade>
                     </div>
                 </a>
-                <a href="https://github.com/EuroguessrTeam/Euroguessr/" target="_blank" className='project'>
+                <a href="https://github.com/Furiza31/CompWeb-Projet-Tarot-Angular" target="_blank" className='project'>
                     <Fade cascade direction='up' duration={150}>
                         <div className='content'>
                             <h1>{t.getTranslation('projects_tarot_title')} <img src="/images/icons/open-external.svg" alt="Open external" /></h1>
