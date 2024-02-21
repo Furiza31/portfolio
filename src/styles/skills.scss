@@ -1,106 +1,57 @@
 @import './variables.scss';
 
-
 section.skills {
-    position: relative;
-    display: block;
-    padding: 0px $mobile-center-padding;
-    width: 100%;
-    margin-top: 50px;
-    padding-top: $header-height;
-    transition-duration: 0.3s;
+	position: relative;
+	display: block;
+	padding: 0px $mobile-center-padding;
+	width: 100%;
+	margin-top: 50px;
+	padding-top: $header-height;
+	transition-duration: 0.3s;
 
-    fieldset {
-        position: relative;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: stretch;
-        gap: calc(5vh + 20px) 10%;
-        width: 100%;
-        height: auto;
-        border: none;
-        border-top: 1px solid $primary-alpha;
-        transition-duration: 0.3s;
+	fieldset {
+		position: relative;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: stretch;
+		gap: calc(5vh + 20px) 10%;
+		width: 100%;
+		height: auto;
+		border: none;
+		border-top: 1px solid $primary-alpha;
+		transition-duration: 0.3s;
 
-        legend {
-            position: relative;
-            text-align: center;
-            font-size: calc($font-size + 5vw);
-            font-weight: bold;
-            color: $primary-alpha;
-            margin-bottom: 50px;
-            padding: 0px calc(2.5vw + 10px);
-        }
-
-        div.skill {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            width: 10%;
-            flex-shrink: 0;
-            flex-grow: 1;
-            padding: 15px;
-            gap: 10px;
-            background-color: $primary-beta;
-            min-width: 250px;
-            max-width: 50%;
-            border-radius: 10px;
-            border: 1px solid $color-primary;
-    
-            h1 {
-                font-size: $font-size * 1.5;
-                font-weight: bold;
-                text-align: center;
-            }
-
-            div {
-                position: relative;
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                gap: 10px;
-
-                img {
-                    position: relative;
-                    width: $font-size;
-                    aspect-ratio: 1/1;
-                    background-color: transparent;
-                }
-
-                p {
-                    position: relative;
-                    font-size: $font-size;
-                }
-            }
-
-        }
-
-    }
+		legend {
+			position: relative;
+			text-align: center;
+			font-size: calc($font-size + 5vw);
+			font-weight: bold;
+			color: $primary-alpha;
+			margin-bottom: 50px;
+			padding: 0px calc(2.5vw + 10px);
+		}
+	}
 }
 
 @media screen and (max-width: 1300px) {
-    section.skills {
-        fieldset {
-            gap: calc(5vh + 20px) 5%;
+	section.skills {
+		fieldset {
+			gap: calc(5vh + 20px) 5%;
 
-            legend {
-                font-size: calc($font-size * 2 + 1vw);
-            }
-        }
-    }
+			legend {
+				font-size: calc($font-size * 2 + 1vw);
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 650px) {
-    section.skills {
-        fieldset {
-            div.skill {
-                min-width: 80%;
-            }
-        }
-    }    
+	section.skills {
+		fieldset {
+			div.skill {
+				min-width: 80%;
+			}
+		}
+	}
 }

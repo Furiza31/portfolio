@@ -3,58 +3,59 @@
 @import './variables.scss';
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    color: $text-color;
-    font-size: $font-size;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	color: $text-color;
+	font-size: $font-size;
 }
 
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
-::-moz-selection { /* Code for Firefox */
-    color: $text-color;
-    background: $color-primary;
+::-moz-selection {
+	/* Code for Firefox */
+	color: $text-color;
+	background: $color-primary;
 }
-  
+
 ::selection {
-    color: $text-color;
-    background: $color-primary;
+	color: $text-color;
+	background: $color-primary;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 8px;
+	width: 8px;
 }
-  
+
 /* Track */
 ::-webkit-scrollbar-track {
-    background: $color-secondary;
+	background: $color-secondary;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $color-primary;
-    border-radius: 2.5px;
+	background: $color-primary;
+	border-radius: 2.5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: $primary-alpha;
+	background: $primary-alpha;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 img {
-    background-color: $color-primary;
-    object-fit: cover;
+	background-color: $color-primary;
+	object-fit: cover;
 }
 
 body {
-    background-color: $color-background;
+	background-color: $color-background;
 }

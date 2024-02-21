@@ -1,0 +1,23 @@
+@import '../variables.scss';
+
+div.skillItem {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	gap: 10px;
+
+	img {
+		position: relative;
+		width: $font-size;
+		aspect-ratio: 1/1;
+		background-color: transparent;
+	}
+
+	p {
+		position: relative;
+		font-size: $font-size;
+	}
+}
