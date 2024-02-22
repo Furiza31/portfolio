@@ -1,317 +1,318 @@
 @import './variables.scss';
 
 header {
-    position: sticky;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    top: 0px;
-    left: 0px;
-    z-index: 100;
-    padding: 0px $mobile-center-padding;
-    height: $header-height;
-    width: 100%;
-    transition-duration: 0.3s;
+	position: sticky;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	top: 0px;
+	left: 0px;
+	z-index: 100;
+	padding: 0px $mobile-center-padding;
+	height: $header-height;
+	width: 100%;
+	transition-duration: 0.3s;
 
-    a.title {
-        position: relative;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 2vw;
-        cursor: pointer;
-        padding: 5px;
+	a.title {
+		position: relative;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 2vw;
+		cursor: pointer;
+		padding: 5px;
 
-        &:hover h1 {
-            color: $color-primary;
-        }
+		&:hover h1 {
+			color: $color-primary;
+		}
 
-        img {
-            height: 45px;
-            width: 45px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0px 0px 10px 0px $primary-alpha;
-        }
+		img {
+			height: 45px;
+			width: 45px;
+			border-radius: 50%;
+			object-fit: cover;
+			box-shadow: 0px 0px 10px 0px $primary-alpha;
+		}
 
-        h1 {
-            font-size: $font-size * 1.5;
-            font-weight: bold;
-            transition-duration: 0.3s;
-            font-family: 'Rock Salt', cursive;
-        }
-    }
+		h1 {
+			font-size: $font-size * 1.5;
+			font-weight: bold;
+			transition-duration: 0.3s;
+			font-family: 'Rock Salt', cursive;
+		}
+	}
 
-    nav {
-        position: relative;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 1vw;
+	nav {
+		position: relative;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 1vw;
 
-        a, div.menu {
-            position: relative;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition-duration: 0.3s;
-            border: 1px solid $color-background;
-            cursor: pointer;
+		a,
+		div.menu {
+			position: relative;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			padding: 10px 15px;
+			border-radius: 5px;
+			transition-duration: 0.3s;
+			border: 1px solid $color-background;
+			cursor: pointer;
 
-            &:hover {
-                background-color: $color-secondary;
-                border: 1px solid $color-primary;
+			&:hover {
+				background-color: $color-secondary;
+				border: 1px solid $color-primary;
 
-                div.submenu {
-                    display: flex;
-                }
-            }
+				div.submenu {
+					display: flex;
+				}
+			}
 
-            img {
-                position: relative;
-                display: block;
-                width: 20px;
-                height: 20px;
-                background-color: transparent;
-                fill: $text-color;
-            }
+			img {
+				position: relative;
+				display: block;
+				width: 20px;
+				height: 20px;
+				background-color: transparent;
+				fill: $text-color;
+			}
 
-            div.submenu {
-                position: absolute;
-                display: none;
-                flex-flow: column nowrap;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 10px;
-                background-color: $color-background;
-                border-radius: 5px;
-                padding: 10px;
-                margin-top: 10%;
-                top: 100%;
-                left: 50%;
-                transform: translateX(-50%);
-                box-shadow: 0px 0px 10px 0px $primary-alpha;
-                z-index: 103;
-                cursor: default;
+			div.submenu {
+				position: absolute;
+				display: none;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: center;
+				gap: 10px;
+				background-color: $color-background;
+				border-radius: 5px;
+				padding: 10px;
+				margin-top: 10%;
+				top: 100%;
+				left: 50%;
+				transform: translateX(-50%);
+				box-shadow: 0px 0px 10px 0px $primary-alpha;
+				z-index: 103;
+				cursor: default;
 
-                &::before {
-                    content: '';
-                    position: absolute;
-                    display: block;
-                    height: 20%;
-                    width: 100%;
-                    top: -15%;
-                }
+				&::before {
+					content: '';
+					position: absolute;
+					display: block;
+					height: 20%;
+					width: 100%;
+					top: -15%;
+				}
 
-                .language {
-                    position: relative;
-                    display: flex;
-                    flex-flow: row nowrap;
-                    justify-content: flex-start;
-                    align-items: center;
-                    gap: 10px;
-                    padding: 10px 15px;
-                    border-radius: 5px;
-                    transition-duration: 0.3s;
-                    width: 100%;
-                    border: 1px solid $color-background;
-                    cursor: pointer;
-                    background-color: transparent;
+				.language {
+					position: relative;
+					display: flex;
+					flex-flow: row nowrap;
+					justify-content: flex-start;
+					align-items: center;
+					gap: 10px;
+					padding: 10px 15px;
+					border-radius: 5px;
+					transition-duration: 0.3s;
+					width: 100%;
+					border: 1px solid $color-background;
+					cursor: pointer;
+					background-color: transparent;
 
-                    &:hover {
-                        background-color: $color-secondary;
-                        border: 1px solid $color-primary;
-                    }
-                }
-            }
-        }
+					&:hover {
+						background-color: $color-secondary;
+						border: 1px solid $color-primary;
+					}
+				}
+			}
+		}
 
-        div.menu {
-            min-width: 150px;
+		div.menu {
+			min-width: 150px;
 
-            div.submenu {
-                min-width: 150px;
+			div.submenu {
+				min-width: 150px;
 
-                .language {
-                    min-width: 130px;
-                }
-            }
-        }
+				.language {
+					min-width: 130px;
+				}
+			}
+		}
 
-        a.toggled, div.menu div.submenu .language.active {
-            background-color: $color-secondary;
-        }
+		a.toggled,
+		div.menu div.submenu .language.active {
+			background-color: $color-secondary;
+		}
 
-        h1.menu-title {
-            font-size: $font-size * 2;
-            font-weight: bold;
-            transition-duration: 0.3s;
-            font-family: 'Rock Salt', cursive;
-            display: none;
-        }
-    }
+		h1.menu-title {
+			font-size: $font-size * 2;
+			font-weight: bold;
+			transition-duration: 0.3s;
+			font-family: 'Rock Salt', cursive;
+			display: none;
+		}
+	}
 
-    div.toggle {
-        position: relative;
-        display: none;
-        cursor: pointer;
-        height: 35px;
-        width: 35px;
-        z-index: 102;
+	div.toggle {
+		position: relative;
+		display: none;
+		cursor: pointer;
+		height: 35px;
+		width: 35px;
+		z-index: 102;
 
-        span {
-            position: absolute;
-            display: block;
-            height: 2px;
-            width: 100%;
-            background-color: $color-primary;
-            border-radius: 2.5px;
-            transition-duration: 0.3s;
+		span {
+			position: absolute;
+			display: block;
+			height: 2px;
+			width: 100%;
+			background-color: $color-primary;
+			border-radius: 2.5px;
+			transition-duration: 0.3s;
 
-            &:nth-child(1) {
-                top: 0px;
-            }
+			&:nth-child(1) {
+				top: 0px;
+			}
 
-            &:nth-child(2) {
-                top: 50%;
-                transform: translateY(-50%);
-            }
+			&:nth-child(2) {
+				top: 50%;
+				transform: translateY(-50%);
+			}
 
-            &:nth-child(3) {
-                bottom: 0px;
-            }
-        }
-    }
+			&:nth-child(3) {
+				bottom: 0px;
+			}
+		}
+	}
 }
 
 header.scrolled {
-    background-color: $color-background;
-    box-shadow: 0px 0px 10px 0px $primary-alpha;
+	background-color: $color-background;
+	box-shadow: 0px 0px 10px 0px $primary-alpha;
 }
 
 @media screen and (max-width: 1350px) {
+	header {
+		nav {
+			position: absolute;
+			display: none;
+			right: 0px;
+			top: 0px;
+			height: 100vh;
+			width: 100vw;
+			background-color: $color-background;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+			gap: 4vh;
+			z-index: 101;
+			animation-name: slideIn;
+			animation-duration: 0.3s;
 
-    header {
-        nav {
-            position: absolute;
-            display: none;
-            right: 0px;
-            top: 0px;
-            height: 100vh;
-            width: 100vw;
-            background-color: $color-background;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
-            gap: 4vh;
-            z-index: 101;
-            animation-name: slideIn;
-            animation-duration: 0.3s;
+			a,
+			div.menu {
+				font-size: $font-size * 1.5;
 
-            a, div.menu {
-                font-size: $font-size * 1.5;
+				img {
+					width: 30px;
+					height: 30px;
+				}
 
-                img {
-                    width: 30px;
-                    height: 30px;
-                }
+				span {
+					display: none;
+				}
 
-                span {
-                    display: none;
-                }
+				div.submenu {
+					position: relative;
+					display: flex;
+					flex-flow: row nowrap;
+					justify-content: center;
+					align-items: center;
+					font-size: $font-size * 1.5;
+					margin: initial;
+					padding: 0px;
+					gap: 5px;
+					box-shadow: none;
 
-                div.submenu {
-                    position: relative;
-                    display: flex;
-                    flex-flow: row nowrap;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: $font-size * 1.5;
-                    margin: initial;
-                    padding: 0px;
-                    gap: 5px;
-                    box-shadow: none;
+					&::before {
+						display: none;
+					}
 
-                    &::before {
-                        display: none;
-                    }
+					.language {
+						padding: 7px;
+					}
+				}
+			}
 
-                    .language {
-                        padding: 7px;
-                    }
-                }
-            }
+			div.menu {
+				&:hover {
+					background-color: transparent;
+					border: 1px solid $color-background;
+				}
+			}
 
-            div.menu {
-                &:hover {
-                    background-color: transparent;
-                    border: 1px solid $color-background;
-                }
-            }
+			h1.menu-title {
+				display: block;
+			}
+		}
 
-            h1.menu-title {
-                display: block;
-            }
-        }
+		div.toggle {
+			display: block;
+		}
+	}
 
-        div.toggle {
-            display: block;
-        }
-    }
+	header.toggled {
+		nav {
+			display: flex;
+		}
 
-    header.toggled {
-        nav {
-            display: flex;
-        }
+		div.toggle {
+			span {
+				&:nth-child(1) {
+					transform: translateY(-50%) rotate(45deg);
+					top: 50%;
+				}
 
-        div.toggle {
-            span {
+				&:nth-child(2) {
+					opacity: 0;
+				}
 
-                &:nth-child(1) {
-                    transform: translateY(-50%) rotate(45deg);
-                    top: 50%;
-                }
-
-                &:nth-child(2) {
-                    opacity: 0;
-                }
-
-                &:nth-child(3) {
-                    transform: translateY(50%) rotate(-45deg);
-                    bottom: 50%;
-                }
-            }
-        }
-    }
+				&:nth-child(3) {
+					transform: translateY(50%) rotate(-45deg);
+					bottom: 50%;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 500px) {
-    header {
-        a.title {
-            img {
-                display: none;
-            }
+	header {
+		a.title {
+			img {
+				display: none;
+			}
 
-            h1 {
-                font-size: $font-size;
-            }
-        }
-    }
+			h1 {
+				font-size: $font-size;
+			}
+		}
+	}
 }
 
 @keyframes slideIn {
-    from {
-        opacity: 0;
-    }
+	from {
+		opacity: 0;
+	}
 
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1;
+	}
 }
