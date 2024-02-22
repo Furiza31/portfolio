@@ -2,8 +2,11 @@ import mysql from '../assets/images/icons/skills/databases/mysql.svg';
 import postgresql from '../assets/images/icons/skills/databases/postgresql.svg';
 import angular from '../assets/images/icons/skills/programming/angular.svg';
 import csharp from '../assets/images/icons/skills/programming/csharp.svg';
+import css from '../assets/images/icons/skills/programming/css.svg';
 import dotnet from '../assets/images/icons/skills/programming/dotnet.svg';
+import html from '../assets/images/icons/skills/programming/html.svg';
 import java from '../assets/images/icons/skills/programming/java.svg';
+import javascript from '../assets/images/icons/skills/programming/javascript.svg';
 import nodejs from '../assets/images/icons/skills/programming/nodejs.svg';
 import php from '../assets/images/icons/skills/programming/php.svg';
 import python from '../assets/images/icons/skills/programming/python.svg';
@@ -58,6 +61,16 @@ export const projectsData: ProjectType[] = [
 		technologies: [
 			{ name: 'skills_programming_angular', image: angular },
 			{ name: 'skills_systemAndNetwork_api', image: api },
+		],
+	},
+	{
+		titleKey: 'projects_colorine_title',
+		textKey: 'projects_colorine_text',
+		url: 'https://furiza31.github.io/',
+		technologies: [
+			{ name: 'skills_programming_html', image: html },
+			{ name: 'skills_programming_css', image: css },
+			{ name: 'skills_programming_javascript', image: javascript },
 		],
 	},
 ];

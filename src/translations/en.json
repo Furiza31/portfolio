@@ -32,6 +32,9 @@
 	"skills_programming_git": "Git",
 	"skills_programming_csharp": "C#",
 	"skills_programming_dotnet": "Dot Net",
+	"skills_programming_html": "HTML",
+	"skills_programming_css": "CSS",
+	"skills_programming_javascript": "Javascript",
 	"skills_databases": "Databases",
 	"skills_databases_mysql": "MySQL",
 	"skills_databases_postgresql": "PostgreSQL",
@@ -60,5 +63,7 @@
 	"projects_camellia_title": "Camellia",
 	"projects_camellia_text": "Camellia is a Discord bot that allows you to manage your server, and add fun commands to it.",
 	"projects_tarot_title": "Project Tarot",
-	"projects_tarot_text": "This is a point counter for tarot games. It also displays the details of each round of each game."
+	"projects_tarot_text": "This is a point counter for tarot games. It also displays the details of each round of each game.",
+	"projects_colorine_title": "Colorine",
+	"projects_colorine_text": "Colorine is a memory game that lets you test your visual memory with randomly generated levels of increasing difficulty. The aim is to memorize the color sequence and reproduce it."
 }
