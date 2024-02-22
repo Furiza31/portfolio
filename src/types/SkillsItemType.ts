@@ -1,5 +1,5 @@
-export type SkillsItemType = {
+export interface SkillsItemType {
 	name: string;
 	image: string;
 	translationKey: string;
-};
+}

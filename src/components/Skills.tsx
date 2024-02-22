@@ -1,7 +1,7 @@
-import { skillsData } from '../data/skillsDatas';
+import { skillsData } from '../data/skillsData';
 import { translator } from '../services/translator';
 import '../styles/skills.scss';
-import { SkillsDataType } from '../types/SkillsDataType';
+import { SkillsType } from '../types/SkillsType';
 import { SkillCategory } from './Skills/SkillCategory';
 
 export const Skills: React.FC = () => {
@@ -11,7 +11,7 @@ export const Skills: React.FC = () => {
 		<section className="skills" id="skills">
 			<fieldset>
 				<legend>{t.getTranslation('header_skills')}</legend>
-				{skillsData.map((category: SkillsDataType) => (
+				{skillsData.map((category: SkillsType) => (
 					<SkillCategory key={category.category} {...category} />
 				))}
 			</fieldset>

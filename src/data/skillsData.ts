@@ -24,9 +24,9 @@ import docker from '../assets/images/icons/skills/systemAndNetwork/docker.svg';
 import sshserver from '../assets/images/icons/skills/systemAndNetwork/sshserver.svg';
 import unix from '../assets/images/icons/skills/systemAndNetwork/unix.svg';
 import webserver from '../assets/images/icons/skills/systemAndNetwork/webserver.svg';
-import { SkillsDataType } from '../types/SkillsDataType';
+import { SkillsType } from '../types/SkillsType';
 
-export const skillsData = [
+export const skillsData: SkillsType[] = [
 	{
 		category: 'skills_programming',
 		items: [
@@ -73,4 +73,4 @@ export const skillsData = [
 			{ name: 'ClickUp', image: clickup, translationKey: 'skills_projectManagement_clickup' },
 		],
 	},
-] as SkillsDataType[];
+];

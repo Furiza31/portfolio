@@ -1,17 +1,10 @@
 import { Fade } from 'react-awesome-reveal';
 import { translator } from '../../services/translator';
 import '../../styles/skills/skillCategory.scss';
-import { SkillsDataType } from '../../types/SkillsDataType';
-import { SkillsItemType } from '../../types/SkillsItemType';
+import { SkillsType } from '../../types/SkillsType';
 import { SkillItem } from './SkillItem';
 
-export const SkillCategory: React.FC<SkillsDataType> = ({
-	category,
-	items,
-}: {
-	category: string;
-	items: SkillsItemType[];
-}) => {
+export const SkillCategory: React.FC<SkillsType> = ({ category, items }: SkillsType) => {
 	const t = translator.getInstance();
 
 	return (

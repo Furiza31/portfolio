@@ -18,7 +18,7 @@ const page = (
 	</App>
 );
 
-const routes = [
+export const routes = [
 	{
 		path: '/portfolio/',
 		element: page,
@@ -28,5 +28,3 @@ const routes = [
 		element: <Navigate to="/portfolio/" />,
 	},
 ] as RouteObject[];
-
-export default routes;

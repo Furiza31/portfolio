@@ -1,6 +1,6 @@
 import { SkillsItemType } from './SkillsItemType';
 
-export type SkillsDataType = {
+export interface SkillsType {
 	category: string;
 	items: SkillsItemType[];
-};
+}
