@@ -6,11 +6,13 @@ import { Hero } from '../components/Hero';
 import { Projects } from '../components/Projects';
 import { Skills } from '../components/Skills';
 import { Contacts } from '../components/contacts/Contacts';
+import { Studies } from '../components/Studies';
 
 const page = (
 	<App>
 		<Header />
 		<Hero />
+		<Studies />
 		<Skills />
 		<Projects />
 		<Contacts />
