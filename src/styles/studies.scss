@@ -31,11 +31,51 @@ section.studies {
 			margin-bottom: 50px;
 			padding: 0px calc(2.5vw + 10px);
 		}
+
+		div.study {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: flex-start;
+			width: 100%;
+			height: auto;
+
+			a.study_school {
+				position: relative;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: flex-start;
+				align-items: center;
+				gap: calc(1vw + 5px);
+				font-size: calc($font-size + 1.5vw);
+				font-weight: bold;
+				transition-duration: 0.3s;
+
+				&:hover {
+					transform: translate(0px, -5px);
+				}
+
+				img {
+					position: relative;
+					height: calc($font-size + 1.5vw);
+					aspect-ratio: 1/1;
+					background-color: transparent;
+				}
+			}
+
+			ul {
+				list-style: none;
+				margin-top: 3vh;
+				padding-right: 0px;
+				width: 100%;
+			}
+		}
 	}
 }
 
 @media screen and (max-width: 1300px) {
-	section.skills {
+	section.studies {
 		fieldset {
 			gap: calc(5vh + 20px) 5%;
 
@@ -47,10 +87,18 @@ section.studies {
 }
 
 @media screen and (max-width: 650px) {
-	section.skills {
+	section.studies {
 		fieldset {
-			div.skill {
-				min-width: 80%;
+			div.study {
+				ul {
+					li {
+						div.study_skills {
+							& > div {
+								min-width: 100%;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

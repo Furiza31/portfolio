@@ -11,7 +11,7 @@ export const Projects: React.FC = () => {
 			<fieldset>
 				<legend>{t.getTranslation('header_projects')}</legend>
 				{projectsData.map((project) => (
-					<Project key={project.titleKey} {...project} />
+					<Project key={project.titleKey} project={project} />
 				))}
 			</fieldset>
 		</section>

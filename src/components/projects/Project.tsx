@@ -5,22 +5,22 @@ import '../../styles/projects/project.scss';
 import { ProjectType } from '../../types/ProjectType';
 import { Technology } from './Technology';
 
-export const Project: React.FC<ProjectType> = ({ titleKey, textKey, url, technologies }: ProjectType) => {
+export const Project: React.FC<{ project: ProjectType }> = ({ project }: { project: ProjectType }) => {
 	const t = translator.getInstance();
 	return (
-		<a href={url} target="_blank" className="project">
+		<a href={project.url} target="_blank" className="project" rel="noreferrer noopener">
 			<Fade cascade direction="up" duration={150}>
 				<div className="content">
 					<h1>
-						{t.getTranslation(titleKey)} <img src={openext} alt="Open external" />
+						{t.getTranslation(project.titleKey)} <img src={openext} alt="Open external" />
 					</h1>
-					<p>{t.getTranslation(textKey)}</p>
+					<p>{t.getTranslation(project.textKey)}</p>
 				</div>
 			</Fade>
 			<div className="technologies">
 				<Fade cascade direction="up" duration={150}>
-					{technologies.map((tech) => (
-						<Technology key={tech.name} {...tech} />
+					{project.technologies.map((tech) => (
+						<Technology key={tech.name} technology={tech} />
 					))}
 				</Fade>
 			</div>

@@ -12,11 +12,16 @@ export const ContactLinks: React.FC = () => {
 
 	return (
 		<Fade cascade direction="up" duration={150}>
-			<a href="https://github.com/Furiza31" target="_blank" className="contact_link">
+			<a href="https://github.com/Furiza31" target="_blank" rel="noreferrer noopener" className="contact_link">
 				<img src={github} alt="Github" />
 				{t.getTranslation('contact_link_github')}
 			</a>
-			<a href="https://www.linkedin.com/in/hugo-wendjaneh-036637252/" target="_blank" className="contact_link">
+			<a
+				href="https://www.linkedin.com/in/hugo-wendjaneh-036637252/"
+				target="_blank"
+				rel="noreferrer noopener"
+				className="contact_link"
+			>
 				<img src={linkedin} alt="Linkedin" />
 				{t.getTranslation('contact_link_linkedin')}
 			</a>
@@ -24,7 +29,7 @@ export const ContactLinks: React.FC = () => {
 				<img src={email} alt="E-Mail" />
 				{t.getTranslation('contact_link_email')}
 			</a>
-			<a href={cv} className="contact_link" target="_blank">
+			<a href={cv} className="contact_link" target="_blank" rel="noreferrer noopener">
 				<img src={cvImage} alt="CV" />
 				{t.getTranslation('contact_link_cv')}
 			</a>

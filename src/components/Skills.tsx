@@ -12,7 +12,7 @@ export const Skills: React.FC = () => {
 			<fieldset>
 				<legend>{t.getTranslation('header_skills')}</legend>
 				{skillsData.map((category: SkillsType) => (
-					<SkillCategory key={category.category} {...category} />
+					<SkillCategory key={category.category} category={category} />
 				))}
 			</fieldset>
 		</section>
