@@ -8,7 +8,7 @@ import { StudiesSkillType } from '../../types/studiesDataType';
 export const StudySkill: React.FC<{ skill: StudiesSkillType }> = ({ skill }: { skill: StudiesSkillType }) => {
 	const t = translator.getInstance();
 	return (
-		<Fade cascade direction="up" duration={200} className="fade">
+		<Fade cascade direction="up" duration={200} className="fade fadeStudy">
 			<a className="study_skill" target="_blank" rel="noreferrer noopener" href={skill.link}>
 				<div className="study_skill_title">
 					<h3>
